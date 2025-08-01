@@ -9,6 +9,8 @@ export interface IAlert {
 
 export enum AlertType {
   Information = 1,
+  Resolved,
+  News,
   Urgent
 }
 
