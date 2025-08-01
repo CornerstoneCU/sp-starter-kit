@@ -9,7 +9,7 @@ export class AlertNotifications extends React.Component<IAlertNotificationsProps
     return (
       <div>
         {this.props.alerts.map(alert => <MessageBar
-          messageBarType={alert.type === AlertType.Urgent ? MessageBarType.severeWarning : alert.type === AlertType.Resolved ? MessageBarType.resolved : alert.type === AlertType.News ? MessageBarType.news : MessageBarType.warning}
+          messageBarType={alert.type === AlertType.Urgent ? MessageBarType.error : alert.type === AlertType.Resolved ? MessageBarType.success : alert.type === AlertType.News ? MessageBarType.info : MessageBarType.warning}
           isMultiline={false}
         >
           {alert.message}
